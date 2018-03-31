@@ -593,8 +593,7 @@ layout: default
       <!--
       As we've seen, the properties of an object can be of any type: strings, numbers, objects, and even functions. In the latter case, it's <a onclick="showStep(12);">called…</a>
       -->
-      As we've seen, the properties of an object can be of any type: strings, numbers, objects, and even functions. In the latter case, it's <a onclick="showStep(12);">called…</a>
-      これまで見てきたように、オブジェクトのプロパティは、文字列、数値、オブジェクト、さらには関数のいずれの型であってもかまいません。後者の場合、<a onclick="showStep(12);">それは…</a>。
+      これまで見てきたように、オブジェクトのプロパティは、文字列、数値、オブジェクト、さらには関数のいずれの型であってもかまいません。後者の場合、<a onclick="showStep(12);">それは…</a>
     </p>
   </div>
 </div>
@@ -659,7 +658,7 @@ layout: default
       <!--
       But what if you only needed a <a onclick="showStep(14);">list of things</a>…
       -->
-      しかし、もしあなたがリスト(一覧表)のようなものしか必要としないなら<a onclick="showStep(14);">…</a>。
+      しかし、もしあなたがリスト(一覧表)のようなものしか必要としないなら<a onclick="showStep(14);">…</a>
     </p>
   </div>
 </div>
@@ -983,29 +982,47 @@ layout: default
 
     <div class="stabs is-vertical">
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>name</strong> of the array</div>
+        -->
+        <div class="stab-label">あなたは配列の<strong>名前</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">my_things</span>[1]</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>square bracket</strong></div>
+        -->
+        <div class="stab-label">あなたは<strong>開き角括弧</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">my_things<span class="is-black">[</span>1]</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>index</strong> of the item you wanted to access</div>
+        -->
+        <div class="stab-label">あなたはアクセスしたいアイテムの<strong>インデックス</strong>をタイプしました</div>
         <div class="stab-code"><code class="stabilo">my_things[<span class="is-red">1</span>]</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the square bracket</div>
+        -->
+        <div class="stab-label">あなたは<strong>閉じ角括弧</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">my_things[1<span class="is-black">]</span></code></div>
       </div>
     </div>
 
     <p>
+      <!--
       It turns out that variables are <strong>objects</strong> too! Which means that variables also have <strong>properties</strong> and <strong>methods</strong>.
+      -->
+      変数もやはり<strong>オブジェクト</strong>です! つまり、変数にも<strong>プロパティ</strong>と<strong>メソッド</strong>があります 。
     </p>
 
     <p>
+      <!--
       For example, <code>my_things</code> has a property called <code>length</code>:
+      -->
+      たとえば、<code>my_things</code>には<code>length</code>というプロパティがあります。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_length.md %}{% endcapture %}
@@ -1019,11 +1036,17 @@ layout: default
     {% include partials/gj.html title="That's right!" %}
 
     <p>
+      <!--
       The array has <strong>3</strong> items. You'll see that if you add or remove items in <code>my_things</code>, this <code>length</code> value will change accordingly.
+      -->
+     現在、配列には<strong>3つの</strong>項目があります。 <code>my_things</code>項目を追加または削除すると、<code>length</code>値がそれに応じて変更されます。
     </p>
 
     <p>
+      <!--
       While readability and properties are useful, the main point of a variable is that it's <strong>editable</strong>: you can change the value afterwards!
+      -->
+      可読性とプロパティは便利ですが、変数の主なポイントは<strong>編集可能</strong>であることです。後で値を変更することができます！
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_edit.md %}{% endcapture %}
@@ -1037,19 +1060,31 @@ layout: default
     {% include partials/gj.html title="Yep!" %}
 
     <p>
+      <!--
       Two alert boxes have been displayed, but with different values! That's because between the first call and the second one, the value of <code>my_things</code> has been <strong>updated</strong>: a fourth item, the string <code>'LOVE'</code>, was added.
+      -->
+       警告(alert)ボックスは2つ表示されましたが、値は異なります。これは、最初の呼び出しと2番目の呼び出しの間で、 <code>my_things</code>の値が<strong>更新</strong>されたためです<code>my_things</code>の4番目の項目として文字列<code>'LOVE'</code>が追加されました。
     </p>
 
     <p>
+      <!--
       Note that the second time we're assigning a value to <code>my_things</code>, we're <strong>not</strong> using the <code>var</code> keyword: it's because we're editing the <code>my_things</code> variable defined two lines above.
+      -->
+      <code>my_things</code>に値を割り当てるのは2回目ですが 、<code>var</code>キーワードを使用していないことに注意してください。これは、上記の2行で定義された<code>my_things</code>変数を編集しているためです。
     </p>
 
     <p>
+      <!--
       <strong>You only use the keyword <code>var</code> when you're <em>creating</em> a new variable</strong>, not when you're <em>editing</em> one.
+      -->
+        <strong>新しい変数を<em>作成</em>するときのみは、キーワード<code>var</code>を使用します。</strong> 新しい変数を<em>編集する</em>ときは使用しません。
     </p>
 
     <p>
+      <!--
       Do you remember I told you variables had <strong>methods</strong> too (since they're objects)? Another way to edit an array's value is by using the <code>push()</code> method:
+      -->
+        私はあなたに変数が<strong>メソッド</strong>を持っていると言ったことを覚えていますか？(オブジェクトなので)配列の値を編集する別の方法は、 <code>push()</code>メソッドを使用する方法です。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_push.md %}{% endcapture %}
@@ -1063,11 +1098,17 @@ layout: default
     {% include partials/gj.html title="Fantastic!" %}
 
     <p>
+      <!--
       The <code>my_things</code> array ends up with <strong>4</strong> items.
+      -->
+      <code>my_things</code>配列は<strong>4</strong>項目に変わりました。
     </p>
 
     <p>
+      <!--
       While the <code>push()</code> method altered the array, others simply <strong>return</strong> a value:
+      -->
+      <code>push()</code>メソッドは配列を変更しましたが、他のものは単純に値を<strong>返し</strong>ます。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array_includes.md %}{% endcapture %}
@@ -1081,15 +1122,24 @@ layout: default
     {% include partials/gj.html title="No ninja here!" %}
 
     <p>
+      <!--
       The <code>includes()</code> method checked if the string <code>'ninja'</code> was present in the array. Since it wasn't, the method returned <code>false</code>, a <strong>boolean</strong> value.
+      -->
+      <code>includes()</code>メソッドは文字列<code>'ninja'</code>が配列内に存在するかどうかを調べます。今は存在しなかったので、メソッドは<code>false</code> という <strong>Boolean(真偽値)</strong>を返しました。
     </p>
 
     <p>
+      <!--
       As a matter of fact, when dealing with booleans, typing the keywords <code>true</code> or <code>false</code> is quite rare. Usually, booleans exist as a result of a function call (like <code>includes()</code>) or a <strong>comparison</strong>.
+      -->
+      実際、Boolean(真偽値)を扱うときは、キーワード<code>true</code>または<code>false</code>は非常にまれです。通常、booleanは関数呼び出し(<code>includes()</code>)や<strong>比較</strong>の結果として存在します。
     </p>
 
     <p>
+      <!--
       Here's a "<em>greater than</em>" comparison:
+      -->
+      以下は <em>より大きい</em> 比較の例です。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_innerwidth_boolean.md %}{% endcapture %}
@@ -1103,20 +1153,32 @@ layout: default
     {% include partials/gj.html title="Great again!" %}
 
     <p>
+      <!--
       This means your browser window is <strong id="wider">not</strong> wider than <strong>400 pixels</strong>.
+      -->
+       これは、ブラウザのウィンドウが<strong>400ピクセル</strong>より広い<strong id="wider">ことはない</strong>という結果を示します。
     </p>
 
     <div class="stabs">
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>first item</strong> to compare, a <strong>number</strong></div>
+        -->
+        <div class="stab-label">あなたは<strong>数値</strong> と比較したい<strong>最初の項目</strong> を入力しました。</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">window<span class="is-black">.</span>innerWidth</span> > 400</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the "greater than" <strong>operator</strong></div>
+        -->
+        <div class="stab-label">あなたは "より大きい" <strong>演算子</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">window.innerWidth <span class="is-purple">></span> 400</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>second item</strong>, also a <strong>number</strong></div>
+        -->
+        <div class="stab-label">あなたはまた、<strong>2番目の項目</strong> 、<strong>数値</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">window.innerWidth > <span class="is-red">400</span></code></div>
       </div>
     </div>
@@ -1141,26 +1203,41 @@ layout: default
     <!--
     <h2>Conditional statements <span class="stamp is-concept">concept</span></h2>
     -->
-    <h2>Conditional statements <span class="stamp is-concept">コンセプト</span></h2>
+    <h2>Conditional statement(条件文)<span class="stamp is-concept">コンセプト</span> </h2>
 
     <p>
+      <!--
       Conditional statements are one of the most important concepts in programming. They allow your code to perform certain commands <em>only if</em> certain conditions are met. These conditions can for example be based on:
+      -->
+       Conditional statement(条件文)は、プログラミングにおける最も重要な概念の1つです。特定の条件が満たされている<em>場合にのみ</em> 、コードで特定のコマンドを実行することができます。これらの条件は、例えば、
     </p>
 
     <ul>
       <li>
+        <!--
         a user's input (is the password entered correct?)
+        -->
+       ユーザーの入力（正しいパスワードが入力されているか?）
       </li>
       <li>
+        <!--
         the current state (is it day or night?)
+        -->
+        現在の状態(今は昼か夜か?)
       </li>
       <li>
+        <!--
         the value of a certain element (is this person older than 18?)
+        -->
+        特定の要素の値(この人物は18歳以上か?）
       </li>
     </ul>
 
     <p>
+      <!--
       For now, let's trigger an alert box only if you happen to be on my domain!
+      -->
+      今のところ、あなたが私のドメインにいた場合にのみアラートボックスを起動しましょう!
     </p>
 
     {% capture snippet %}{% include snippets/snippet_if.md %}{% endcapture %}
@@ -1168,7 +1245,11 @@ layout: default
 
     <div class="message is-info">
       <div class="message-body">
+        <!--
         <p>If you want to <strong>type</strong> this code instead of simply copy-pasting it, press <kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">Enter</kbd> to add line breaks in the console!</p>
+        -->
+        <p>単にこのコードをコピーして貼り付けるのではなく、このコードを<strong>入力</strong>ししたい場合は(単純にEnterを押すと実行してしまうので2行目を入れる前に)
+        <kbd class="key">Shift</kbd> <kbd class="plus">+</kbd> <kbd class="key">Enter</kbd>を押してコンソールに改行を追加して<kbd class="key">ください</kbd> !</p>
       </div>
     </div>
   </div>
@@ -1992,7 +2073,7 @@ layout: default
       <span class="side-word is-concept">Variables(変数)</span>
     </div>
     <div id="sideConditionals" class="side-item">
-      <span class="side-word is-concept">Conditionals</span>
+      <span class="side-word is-concept">Conditional statement(条件文)</span>
     </div>
     <div id="sideLoops" class="side-item">
       <span class="side-word is-concept">Loops</span>
@@ -2016,10 +2097,10 @@ layout: default
       <span class="side-word is-type">Object(オブジェクト)</span>
     </div>
     <div id="sideArrays" class="side-item">
-      <span class="side-word is-type">Arrays</span>
+      <span class="side-word is-type">Array(配列)</span>
     </div>
     <div id="sideBooleans" class="side-item">
-      <span class="side-word is-type">Booleans</span>
+      <span class="side-word is-type">Boolean(真偽値)</span>
     </div>
   </div>
 </aside>
