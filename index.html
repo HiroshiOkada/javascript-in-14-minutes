@@ -13,16 +13,25 @@ layout: default
   </div>
 
   <div class="content">
+    <!--
     <p>Since you've already learned <a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Web design in 4 minutes</a>, it's time to dive into the Web's main programming language: <strong>JavaScript</strong>.</p>
+    -->
+    <p><a href="https://jgthms.com/web-design-in-4-minutes/" target="_blank">Web design in 4 minutes(4分でわかるWebデザイン)</a>を週直したので、Webのためのプログラム言語<strong>JavaScript</strong>を勉強しましょう。</p>
   </div>
 
   <!-- Case: noscript -->
   <noscript>
     <div class="message is-warning">
       <div class="message-body">
+        <!--
         To learn JavaScript, you need to enable it first!
+        -->
+        JavaScriptを学ぶには、最初にJavaScriptを有効にする必要があります。
         <br>
+        <!--
         <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">Learn how to enable JavaScript in your web browser</a>.
+        -->
+        <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">ウェブブラウザでJavaScriptを有効にする方法を学ぶ↗</a>.
       </div>
     </div>
     <style type="text/css">#introduction{ display: none; }</style>
@@ -33,18 +42,33 @@ layout: default
     <div class="message is-warning">
       <div class="message-body">
         <p>
+          <!--
           It looks like you're on a <strong><span class="case is-mobile">mobile device</span> <span class="case is-tablet">tablet</span></strong>! 😱
+          -->
+          あなたは <strong><span class="case is-mobile">携帯やスマートフォン</span><span class="case is-tablet">タブレット</span></strong>を使っていますね😱
         </p>
         <p>
+          <!--
           But fear not! 😊
+          -->
+          心配しないで下さい! 😊
         </p>
         <p>
+          <!--
           While this tutorial is not optimized for this platform, I still made it readable enough for you to enjoy.
+          -->
+          このチュートリアルはこのプラットフォーム用に最適化されていませんが。それでもあなたがこれを読んで楽しめるように作成しました。
         </p>
         <p>
+          <!--
           You should however revisit it on a desktop later if you can, to experience all the features!
+          -->
+          あとでパソコンでここに来て全てのの機能を体験してください！
         </p>
+        <!--
         <p>Anyway, <a onclick="showStep(1);">let's get started</a>!</p>
+        -->
+        <p>とにかく<a onclick="showStep(1);">始めてみましょう</a>!</p>
       </div>
     </div>
   </div>
@@ -52,11 +76,16 @@ layout: default
   <!-- Case: desktop -->
   <div id="introduction" class="case is-desktop">
     <div class="content">
+      <!--
       <p>I believe you are using this:</p>
-
+      -->
+      <p>あなたは以下の物を使っているとおもいます:</p>
       <div id="platform" class="detect">
         <div class="field">
+          <!--
           <div class="label"><strong>Operating System</strong></div>
+          -->
+          <div class="label"><strong>オペレーティングシステム(OS)</strong></div>
           <div class="select">
             <select id="os">
               <option value="">---</option>
@@ -67,7 +96,10 @@ layout: default
           </div>
         </div>
         <div class="field">
+          <!--
           <div class="label"><strong>Web Browser</strong></div>
+          -->
+          <div class="label"><strong>Webブラウザ</strong></div>
           <div class="select">
             <select id="browser">
               <option value="">---</option>
@@ -81,7 +113,10 @@ layout: default
         </div>
       </div>
 
+      <!--
       <p>If this information is correct, let's <a onclick="showStep(1);">get started</a>.</p>
+      -->
+      <p>上記の情報が正しければ<a onclick="showStep(1);">始めましょう</a>.</p>
     </div>
   </div>
 
@@ -89,9 +124,15 @@ layout: default
   <div id="return" class="message is-success">
     <div class="message-body">
       <p>
+        <!--
         It looks that you've already been here! 😃
+        -->
+        あなたはここにいた事があるようです! 😃
         <br>
+        <!--
         Do you want to <a id="resume">resume from where you left off</a> or <a id="reset">start over</a>?
+        -->
+        どちらか選んで下さい:<a id="resume">前回の場所から始める</a> or <a id="reset">最初から始める</a>
       </p>
     </div>
   </div>
@@ -103,44 +144,90 @@ layout: default
     <h2>Console <span class="stamp is-tool">tool</span></h2>
 
     <p>
+      <!--
       Your browser comes with a <strong>developer console</strong> that allows you to type JavaScript directly in this webpage.
+      -->
+      お使いのブラウザには、WebページにJavaScriptを直接入力できる<strong>デベロッパーコンソール</strong>が付属しています。
     </p>
 
     <div class="case is-chrome not-mobile not-tablet">
+      <!--
       Since you're using <strong>Google Chrome</strong>, open the JavaScript console with
+      -->
+      あなたは <strong>Google Chrome</strong>を使っているので、JavaScript コンソールを
+      <!--
       <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">J</kbd> or <kbd class="key">F12</kbd></span>
+      -->
+      <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">J</kbd> または <kbd class="key">F12</kbd></span>
       <span class="case is-mac"><kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">J</kbd></span>
+      で開いて下さい。
     </div>
 
     <div class="case is-firefox not-mobile not-tablet">
+      <!--
       Since you're using <strong>Mozilla Firefox</strong>, open the Web console with
+      -->
+      あなたは <strong>Mozilla Firefox</strong>を使っているので、Web コンソールを
+      <!--
       <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">K</kbd> or <kbd class="key">F12</kbd></span>
+      -->
+      <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">K</kbd> または <kbd class="key">F12</kbd></span>
       <span class="case is-mac"><kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">K</kbd></span>
+      で開いてください。
     </div>
 
     <div class="case is-edge not-mobile not-tablet">
+      <!--
       Since you're using <strong>Microsoft Edge</strong>, open the JavaScript console with
+      -->
+      あなたは <strong>Microsoft Edge</strong> を使っているので、JavaScript コンソールを
       <span class="case is-windows"><kbd class="key">F12</kbd></span>
+      で開いてください。
     </div>
 
     <div class="case is-opera not-mobile not-tablet">
+      <!--
       Since you're using <strong>Opera</strong>, open the JavaScript console with
+      -->
+      あなたは <strong>Opera</strong> を使っているので、JavaScript コンソールを
       <span class="case is-windows is-linux"><kbd class="key">Ctrl</kbd><kbd class="plus">+</kbd><kbd class="key">Shift</kbd><kbd class="plus">+</kbd><kbd class="key">I</kbd></span>
       <span class="case is-mac"><kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">I</kbd></span>
+      で開いてください。
     </div>
 
     <div class="case is-safari not-mobile not-tablet">
+      <!--
       <p>Since you're using <strong>Apple Safari</strong>:</p>
+      -->
+      <p>あなたは <strong>Apple Safari</strong> を使っていますね。</p>
       <ol>
+        <!--
         <li>Go to <strong>Preferences</strong> with <kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">,</kbd></li>
+        -->
+        <li> <kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">,</kbd>で<strong>Preferences</strong>を開いて下さい。</li>
+        <!--
         <li>Go to the <strong>Advanced</strong> tab</li>
+        -->
+        <li><strong>Advanced</strong> tab を選択してください。</li>
+        <!--
         <li>Enable <strong>Show Develop menu in menu bar</strong></li>
+        -->
+        <li><strong>Show Develop menu in menu bar</strong>を有効にしてください。</li>
+        <!--
         <li>Open the JavaScript console <kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">C</kbd></li>
+        -->
+        <li>JavaScript コンソールを<kbd class="key">⌥</kbd><kbd class="plus">+</kbd><kbd class="key">⌘</kbd><kbd class="plus">+</kbd><kbd class="key">C</kbd>で開いてください。</li>
       </ol>
     </div>
 
+    <!--
     <p>Let's see if it works!</p>
+    -->
+    <p>ちゃんと動いていると確認しましょう!</p>
+    <!--
     <p>In the console, type (or paste) the following, and press <kbd class="key">Enter</kbd></p>
+    -->
+    <p>コンソールで以下の物を入力して、<kbd class="key">Enter(↵)</kbd>キーを押してください。</p>
   </div>
 
   {% capture snippet %}{% include snippets/snippet_hello_world.md %}{% endcapture %}
@@ -151,80 +238,152 @@ layout: default
 <div id="step2" class="step">
   <div class="content">
     {% include partials/gj.html %}
+    <!--
     <p>You've just used <code>alert()</code>, a native <strong>JavaScript function</strong> that comes with every browser.</p>
+    -->
+    <p>あなたはいま <code>alert()</code>という全てのWebブラウザにあらかじめ組み込まれた<strong>JavaScript 関数</strong>使用しました。</p>
 
+    <!--
     <p>But what have you <a onclick="showStep(3);">done exactly</a>?</p></div>
+  -->
+    <p>しかし<a onclick="showStep(3);">正確には</a>何をしたのでしょう?</p></div>
   </div>
 </div>
 
 <!-- 03 -->
 <div id="step3" class="step">
   <div class="content">
+    <!--
     <h2>Functions <span class="stamp is-concept">concept</span></h2>
+    -->
+    <h2>関数<span class="stamp is-concept">コンセプト</span></h2>
+    <!--
     <p>You've <strong>called</strong> the <code>alert()</code> <em>function</em> with the <code>'Hello&nbsp;World!'</code> <em>parameter</em>.</p>
+    -->
+    <p>あなたは <code>alert()</code>という<em>関数(function)</em>を<code>'Hello&nbsp;World!'</code>という <em>引数</em>で<strong>呼び出しました</strong>。</p>
 
+    <!--
     <p>You have basically done 4 things:</p>
+    -->
+    <p>あなたは基本的に以下の4つのことをしました。</p>
 
     <div class="stabs">
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>name</strong> of the function</div>
+        -->
+        <div class="stab-label">あなたは関数の <strong>名前</strong> を入力しました。</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">alert</span>('Hello World!')</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        -->
+        <div class="stab-label">あなたは<strong>開きかっこ</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">alert<span class="is-black">(</span>'Hello World!')</code></div>
       </div>
       <div class="stab">
-        <div class="stab-label">you typed a <strong>parameter</strong></div>
+        <!--
+        <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        -->
+        <div class="stab-label">あなたは<strong>引数</strong>を一つ入力しました。</div>
         <div class="stab-code"><code class="stabilo">alert(<span class="is-green">'Hello World!'</span>)</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
+        -->
+        <div class="stab-label">あなたは <strong>閉じかっこ</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">alert('Hello World!'<span class="is-black">)</span></code></div>
       </div>
     </div>
 
+    <!--
     <p>Sometimes, there's no parameter.<br>
     Sometimes, there's multiple parameters.<br>
     Most of them are required, but some of them can be optional.</p>
+    -->
+    <p>引数がない場合もあります。<br>
+    複数の引数がある場合もあります。<br>
+    ほとんど場合引数が必要ですが、引数が省略できる場合もあります。</p>
 
+    <!--
     <p>In this case, <code>alert()</code> requires only one parameter.</p>
+    -->
+    <p>この場合、 <code>alert()</code> は一つの引数をを必要とします。</p>
 
+    <!--
     <p>But what <a onclick="showStep(4);">type of parameter</a> is that?</p>
+    -->
+    <p>しかしどんな <a onclick="showStep(4);">型の引数</a> なのでしょうか?</p>
   </div>
 </div>
 
 <!-- 04 -->
 <div id="step4" class="step">
   <div class="content">
+    <!--
     <h2>Strings <span class="stamp is-type">type</span></h2>
+    -->
+    <h2>文字列(String) <span class="stamp is-type">型</span></h2>
 
+    <!--
     <p>When you handle text, you're using <strong>strings</strong>, which are a series of <em>characters</em>. In our case, we used a series of <strong>12 characters</strong>: <code>Hello World!</code>. This includes all lowercase and uppercase letters, the space, and the exclamation point.</p>
+    -->
 
+    <p>あなたがテキストを扱う時には、<strong>文字列(string)</strong>を使います。<strong>文字列(string)</strong>は連続した<em>文字(character)</em>です。この場合、連続した<strong>12文字を使いました。</strong>
+      <code>Hello World!</code>。 この文字列には英大文字、英小文字、空白、ビックリマークを含んでいました。</p>
+
+    <!--
     <p>To define where the string <em>starts</em> and where it <em>ends</em>, you need to wrap it in <strong>quotes</strong> (either single <code>'</code> or double <code>"</code>).</p>
+    -->
+    <p>文字列の <em>開始位置</em> と<em>終了位置</em>を指定するため、文字列を<strong>クオーテーションマーク</strong> で囲みます。(シングル−クオート <code>'</code> でもダブルクオートでも <code>"</code>開始と終了で一致していればOKです。)</p>
 
+    <!--
     <p>When you defined the <code>'Hello World!'</code> string:</p>
+    -->
+    <p>あなたが <code>'Hello World!'</code> という文字列(string)を定義したとき:</p>
 
     <ol>
+      <!--
       <li>you typed a single <strong>quote</strong></li>
       <li>you typed the <strong>12 characters</strong></li>
       <li>you typed another single <strong>quote</strong></li>
+      -->
+      <li>あなたは<strong>シングルクオート</strong>を入力しました。</li>
+      <li>あなたは文字を <strong>12 文字</strong>入力しました。</li>
+      <li>あなたはもう一度 <strong>シングルクオート</strong>を入力しました。</li>
     </ol>
 
+    <!--
     <p>What if you wanted to deal with <a onclick="showStep(5);">numbers instead</a>?</p>
+    -->
+    <p>文字列の代わりに <a onclick="showStep(5);">数値</a>を使ったらどうなるでしょうか?</p>
   </div>
 </div>
 
 <!-- 05 -->
 <div id="step5" class="step">
   <div class="content">
+    <!--
     <h2>Numbers <span class="stamp is-type">type</span></h2>
+    -->
+    <h2>数値(Number) <span class="stamp is-type">型</span></h2>
 
+    <!--
     <p>Like any other programming language, JavaScript can handle <strong>numbers</strong>.</p>
+    -->
+    <p>他のプログラム言語と同様、 JavaScript <strong>数値(number)</strong>を扱うことができます。</p>
 
+    <!--
     <p>These numbers can be big or small, with or without decimals, combined through numeric operations…</p>
+    -->
+    <p>これらの数値は、大きくても小さくてもよく、小数点があってもなくてもよく、数値演算によって結合されます。</p>
 
+    <!--
     <p>Type or paste the following snippet in your console:</p>
+    -->
+    <p>以下のものをコンソールに入力もしくは貼りつけて下さい。</p>
   </div>
 
   {% capture snippet %}{% include snippets/snippet_numbers.md %}{% endcapture %}
@@ -236,27 +395,50 @@ layout: default
   <div class="content">
     {% include partials/gj.html title="Perfect!" %}
 
+    <!--
     <p>Notice a few things:</p>
+    -->
+    <p>以下の事に注目してください</p>
 
     <ul>
+      <!--
       <li>you're using the <code>+</code> and <code>*</code> <strong>operators</strong></li>
       <li>the <strong>mathematical order</strong> is respected: first <code>5 * 3</code> is calculated, then <code>9 + 15</code></li>
       <li>the <strong>spaces</strong> around the <code>*</code> symbol don't affect the output ; they're just here to help us (humans!) <em>read</em> the code.</li>
+      -->
+      <li>あなたは <code>+</code> と <code>*</code> という <strong>演算子(operator)</strong>を使いました。</li>
+      <li><strong>計算の順序は</strong> 以下のとおりです。　最初に <code>5 * 3</code> が計算され次に <code>9 + 15</code> が計算されました。</li>
+      <li><code>*</code> の周りの <strong>空白</strong> は出力に関係しません。 それらは単に私たち(人間!)が<em>コード読む時</em>にのみ役立ちます。 </li>
     </ul>
 
+    <!--
     <p>You can find numbers in <a onclick="showStep(7);">lots of places</a>.</p>
+    -->
+    <p>あなたは <a onclick="showStep(7);">いろんな所で</a>数値を見るでしょう。</p>
   </div>
 </div>
 
 <!-- 07 -->
 <div id="step7" class="step">
   <div class="content">
+    <!--
     <h2>Browser dimensions <span class="stamp is-info">info</span></h2>
+    -->
+    <h2>ブラウザの寸法の <span class="stamp is-info">情報</span></h2>
+    <!--
     <p>Numbers are everywhere! Especially in a browser.</p>
+    -->
+    <p>数値はあらゆる所に現れます! とくにWebブラウザでは.</p>
 
+    <!--
     <p>For example, your current browser window has a certain <strong>width</strong> that you can access with JavaScript.</p>
+    -->
+    <p>例を上げると、あたたが今使っているWebブラウザのウィンドはあなたがJavaScriptを使って取得できる<strong>幅(width)</strong>をもっています。</p>
 
+    <!--
     <p>Type the following:</p>
+    -->
+    <p>以下のように入力してください。</p>
 
     {% capture snippet %}{% include snippets/snippet_innerwidth.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
@@ -269,54 +451,102 @@ layout: default
     {% include partials/gj.html title="Wonderful!" %}
 
     <p>
+      <!--
       This means your browser's window is <strong id="browserWidth">1680</strong> pixels wide.
+      -->
+      これはあなたのブラウザのウィンドの幅が <strong id="browserWidth">1680</strong> ピクセルであることを意味します。
     </p>
 
     <p>
+      <!--
       As you would have guessed, <code>window.innerHeight</code> exists as well, as does <code>window.scrollY</code>, which gives you the current scroll position.
+      -->
+      あなたが想像しているように <code>window.innerHeight</code> (ウィンドーの内部の幅) も存在します。また現在のスクロール位置である <code>window.scrollY</code> も存在します。
     </p>
 
+    <!--
     <p>But what is <code>window</code> <a onclick="showStep(9);">exactly</a>?</p>
+    -->
+    <p>けれど <code>window</code> とは <a onclick="showStep(9);">実際には</a>何でしょうか?</p>
   </div>
 </div>
 
 <!-- 09 -->
 <div id="step9" class="step">
   <div class="content">
+    <!--
     <h2>Objects <span class="stamp is-type">type</span></h2>
+    -->
+    <h2>オブジェクト(Object) <span class="stamp is-type">型</span></h2>
 
     <p>
+      <!--
       <code>window</code> is a JavaScript <strong>object</strong>.
+      -->
+      <code>window</code> は JavaScript の<strong>オブジェクト(object)</strong>です。
     </p>
     <p>
+      <!--
       <code>innerWidth</code> is a <strong>property</strong> of the <code>window</code> object.
+      -->
+      <code>innerWidth</code>は <code>window</code> オブジェクト(object) の <strong>プロパティ(property)</strong>です。
       <br>
+      <!--
       To access this property, you used a dot <code>.</code> to specify you wanted the <code>innerWidth</code> that exists <em>within</em> the <code>window</code> object.
+      -->
+      このプロパティにアクセスするには、 <code>window</code>オブジェクト<em>内</em>に存在する<code>innerWidth</code>を指定するためにドット<code>.</code> を使用しました。
     </p>
 
+    <!--
     <p>The JavaScript object is basically a <strong>type</strong> that contains other things.</p>
+    -->
+    <p> JavaScriptのオブジェクト(object)は基本的に他のものを含む<strong>型</strong>です。 </p>
+
+    <!--
     <p>For example, <code>window</code> also has:</p>
+    -->
+    <p>例えば <code>window</code> オブジェクトは以下のような物も含んでいます。</p>
 
     <ul>
+      <!--
       <li><code>window.origin</code> which is a string</li>
       <li><code>window.scrollY</code> which is a number</li>
       <li><code>window.location</code> which is an object</li>
+      -->
+      <li><code>window.origin</code> は文字列です。</li>
+      <li><code>window.scrollY</code> は数値です。</li>
+      <li><code>window.location</code> はオブジェクトです。</li>
     </ul>
 
+    <!--
     <p>If <code>window</code> is an object that contains <code>location</code> which is another object, this means that <a onclick="showStep(10);">JavaScript objects support</a>…</p>
+    -->
+    <p> <code>window</code> が別のオブジェクトである <code>location</code> を含むオブジェクトを含んでいます。これは <a onclick="showStep(10);">JavaScript の オプジェクトの典型的な例</a> です… </p>
   </div>
 </div>
 
 <!-- 10 -->
 <div id="step10" class="step">
   <div class="content">
+    <!--
     <h2>Nesting <span class="stamp is-info">info</span></h2>
+    -->
+    <h2>入れ子(Nesting)になった<span class="stamp is-info">情報</span></h2>
 
+    <!--
     <p>A property of an object can be an object itself (inception!).</p>
+    -->
+    <p>オブジェクトのプロパティ、それ自身がオブジェクトにであることがあります。</p>
 
+    <!--
     <p>Since <code>window.location</code> is an object too, it has properties of its own. To access these properties, just add another dot <code>.</code> and the name of the property.</p>
+    -->
+    <p><code>window.location</code> もまたオブジェクトなのでそれ自身のプロパティを持ちます。 それらのプロパティーにアクセスするためには、さらにもう一度ドット <code>.</code> とプロパティーの名前を追加します。</p>
 
+    <!--
     <p>For example, the <code>href</code> property exists:</p>
+    -->
+    <p>例えば <code>href</code> というプロパティーがあります。</p>
 
     {% capture snippet %}{% include snippets/snippet_href.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
