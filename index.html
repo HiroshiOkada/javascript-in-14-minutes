@@ -31,7 +31,7 @@ layout: default
         <!--
         <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">Learn how to enable JavaScript in your web browser</a>.
         -->
-        <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">ウェブブラウザでJavaScriptを有効にする方法を学ぶ</a>.
+        <a href="https://www.enable-javascript.com/" target="_blank" rel="nofollow">WebブラウザでJavaScriptを有効にする方法を学ぶ</a>.
       </div>
     </div>
     <style type="text/css">#introduction{ display: none; }</style>
@@ -259,7 +259,7 @@ layout: default
     <!--
     <h2>Functions <span class="stamp is-concept">concept</span></h2>
     -->
-    <h2>関数<span class="stamp is-concept">コンセプト</span></h2>
+    <h2>Function(関数)<span class="stamp is-concept">コンセプト</span></h2>
     <!--
     <p>You've <strong>called</strong> the <code>alert()</code> <em>function</em> with the <code>'Hello&nbsp;World!'</code> <em>parameter</em>.</p>
     -->
@@ -282,7 +282,7 @@ layout: default
         <!--
         <div class="stab-label">you opened a <strong>parenthesis</strong></div>
         -->
-        <div class="stab-label">あなたは<strong>開きかっこ</strong>を入力しました。</div>
+        <div class="stab-label">あなたは<strong>開き括弧</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">alert<span class="is-black">(</span>'Hello World!')</code></div>
       </div>
       <div class="stab">
@@ -296,7 +296,7 @@ layout: default
         <!--
         <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
         -->
-        <div class="stab-label">あなたは <strong>閉じかっこ</strong>を入力しました。</div>
+        <div class="stab-label">あなたは <strong>閉じ括弧</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">alert('Hello World!'<span class="is-black">)</span></code></div>
       </div>
     </div>
@@ -328,7 +328,7 @@ layout: default
     <!--
     <h2>Strings <span class="stamp is-type">type</span></h2>
     -->
-    <h2>文字列(String) <span class="stamp is-type">型</span></h2>
+    <h2>String(文字列) <span class="stamp is-type">型</span></h2>
 
     <!--
     <p>When you handle text, you're using <strong>strings</strong>, which are a series of <em>characters</em>. In our case, we used a series of <strong>12 characters</strong>: <code>Hello World!</code>. This includes all lowercase and uppercase letters, the space, and the exclamation point.</p>
@@ -371,7 +371,7 @@ layout: default
     <!--
     <h2>Numbers <span class="stamp is-type">type</span></h2>
     -->
-    <h2>数値(Number) <span class="stamp is-type">型</span></h2>
+    <h2>Number(数値)<span class="stamp is-type">型</span></h2>
 
     <!--
     <p>Like any other programming language, JavaScript can handle <strong>numbers</strong>.</p>
@@ -480,7 +480,7 @@ layout: default
     <!--
     <h2>Objects <span class="stamp is-type">type</span></h2>
     -->
-    <h2>オブジェクト(Object) <span class="stamp is-type">型</span></h2>
+    <h2>Object(オブジェクト)<span class="stamp is-type">型</span></h2>
 
     <p>
       <!--
@@ -561,22 +561,40 @@ layout: default
   <div class="content">
     {% include partials/gj.html title="Awesome!" %}
 
+    <!--
     <p>You just displayed the <strong>full URL</strong> of this webpage. This is because:</p>
+    -->
+    <p>あなたはこのWebページの<strong>完全なURL</strong>を表示しました。どうしてこうなったのでしょうか。</p>
 
     <ul>
+      <!--
       <li><code>window</code> is an object</li>
       <li><code>location</code> is an object</li>
       <li><code>href</code> is a string</li>
+      -->
+      <li><code>window</code> はオブジェクト(object)です</li>
+      <li><code>location</code> もオブジェクト(object)です</li>
+      <li><code>href</code> は文字列(string)です</li>
     </ul>
 
     <p>
+      <!--
       There's no limit to how deeply objects can be nested.
+      -->
+      オブジェクトの入れ子の深さに制限はありません。
       <br>
+      <!--
       There's also no limit to the number of properties an object can have.
+      -->
+      オブジェクトが持つことができるプロパティの数にも制限はありません。
     </p>
 
     <p>
+      <!--
       As we've seen, the properties of an object can be of any type: strings, numbers, objects, and even functions. In the latter case, it's <a onclick="showStep(12);">called…</a>
+      -->
+      As we've seen, the properties of an object can be of any type: strings, numbers, objects, and even functions. In the latter case, it's <a onclick="showStep(12);">called…</a>
+      これまで見てきたように、オブジェクトのプロパティは、文字列、数値、オブジェクト、さらには関数のいずれの型であってもかまいません。後者の場合、<a onclick="showStep(12);">それは…</a>。
     </p>
   </div>
 </div>
@@ -587,11 +605,17 @@ layout: default
     <!--
     <h2>Methods <span class="stamp is-info">info</span></h2>
     -->
-    <h2>Methods <span class="stamp is-info">情報</span></h2>
+    <h2>メソッド(Method)<span class="stamp is-info">情報</span></h2>
 
+    <!--
     <p>When an object's <strong>property</strong> is a <strong>function</strong>, it's called a <strong>method</strong> instead.</p>
+    -->
+    <p>オブジェクトの<strong>プロパティ</strong>が<strong>関数</strong>である場合、<strong>メソッド</strong>と呼ばれます。 </p>
 
+    <!--
     <p>Actually, the <code>alert()</code> function we've been using so far is a method of the <code>window</code> object!</p>
+    -->
+    <p>実際には、これまで使用してきた<code>alert()</code>関数は<code>window</code>オブジェクトのメソッドです! </p>
 
     {% capture snippet %}{% include snippets/snippet_omg.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
@@ -604,23 +628,38 @@ layout: default
     {% include partials/gj.html title="OMG indeed!" %}
 
     <p>
+      <!--
       Since <code>window</code> is the top-level object in the browser, you can access all its properties and methods directly.
+      -->
+      <code>window</code>はブラウザのトップレベルのオブジェクトなので、すべてのプロパティとメソッドに直接アクセスできます。
     </p>
 
     <p>
+      <!--
       That's why typing <code>location.href</code> is the same as typing <code>window.location.href</code>.
+      -->
+      そのため、 <code>location.href</code>と入力するのは、<code>window.location.href</code>と入力するのと同じです 。
     </p>
 
     <p>
+      <!--
       Or why <code>alert()</code> is equivalent to <code>window.alert()</code>.
+      -->
+      同じように<code>alert()</code>は<code>window.alert()</code>と同じです。
     </p>
 
     <p>
+      <!--
       Objects are useful for grouping several properties under the same name and scope, and defining a <strong>hierarchy</strong> in the data. It's like a tree, where each branch can have other smaller branches.
+      -->
+      オブジェクトは、同じ名前と可視範囲(scope)でいくつかのプロパティをグループ化し、データ内に<strong>階層</strong>を定義するのに便利です。それは、枝が他の小さな枝を持つことができる木のようなものです。
     </p>
 
     <p>
+      <!--
       But what if you only needed a <a onclick="showStep(14);">list of things</a>…
+      -->
+      しかし、もしあなたがリスト(一覧表)のようなものしか必要としないなら<a onclick="showStep(14);">…</a>。
     </p>
   </div>
 </div>
@@ -631,11 +670,18 @@ layout: default
     <!--
     <h2>Arrays <span class="stamp is-type">type</span></h2>
     -->
-    <h2>Arrays <span class="stamp is-type">型</span></h2>
+    <h2>Array(配列) <span class="stamp is-type">型</span></h2>
 
+    <!--
     <p>A JavaScript <strong>array</strong> is a type that can contain multiple values, as if they were in an ordered list.</p>
+    -->
+    <p> JavaScript の<strong>Array(配列)</strong>は、あたかも順序付きのリスト(一覧表)のように、複数の値を含むことができる型です。 </p>
 
+    <!--
     <p>Let's pass an array of <strong>3 strings</strong> to the <code>alert()</code> function:</p>
+    -->
+    <p> <code>alert()</code>関数に<strong>3つの文字列が入った</strong>配列を渡しましょう。</p>
+
     {% capture snippet %}{% include snippets/snippet_what_is_up.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet %}
   </div>
@@ -647,42 +693,69 @@ layout: default
     {% include partials/gj.html title="Exactly!" %}
 
     <p>
+      <!--
       You already know the syntax for calling the <code>alert</code> function: <code>alert(parameter)</code>.
+      -->
+      <code>alert</code>関数を呼び出す構文はすでに分かっていますね。<code>alert(パラメータ)</code>です。
     </p>
 
     <p>
+      <!--
       In this case, the parameter is an array with 3 items that you have defined like this:
+      -->
+      この場合、パラメータは次のように定義した3つの項目を持つ配列です。
     </p>
 
     <div class="stabs">
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>square bracket</strong></div>
+        -->
+        <div class="stab-label">あなたは<strong>開き角括弧</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">[</span>'What', 'is', 'up']</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>first item</strong> of the array, a string</div>
+        -->
+        <div class="stab-label">あなたは配列の<strong>最初の項目</strong>の文字列を入力しました。</div>
         <div class="stab-code"><code class="stabilo">[<span class="is-green">'What'</span>, 'is', 'up']</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed a <strong>comma</strong> to separate the items</div>
+        -->
+        <div class="stab-label">あなたは項目を区切るために<strong>コンマ</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">['What'<span class="is-black">,</span> 'is', 'up']</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you added <strong>two other items</strong> to the list</div>
+        -->
+        <div class="stab-label">あなたは<strong>他の2つの項目</strong>をリストに追加しました</div>
         <div class="stab-code"><code class="stabilo">['What', <span class="is-green">'is'</span><span class="is-black">, </span><span class="is-green">'up'</span>]</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the square bracket</div>
+        -->
+        <div class="stab-label">あなたは<strong>閉じ角括弧</strong>を入力しました。</div>
         <div class="stab-code"><code class="stabilo">['What', 'is', 'up'<span class="is-black">]</span></code></div>
       </div>
     </div>
 
     <p>
+      <!--
       An array can contain any <strong>type</strong> of values: strings, numbers, objects, other arrays, and <em>more</em>…
+      -->
+      配列には文字列、数値、オブジェクト、他の配列、<em>さらに色々な</em><strong>タイプ</strong>のアイテムを含めることができます：
     </p>
 
     <p>
+      <!--
       Try out this snippet:
+      -->
+      次の短いコードを試してみてください。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_list.md %}{% endcapture %}
@@ -696,14 +769,23 @@ layout: default
     {% include partials/gj.html title="True!" %}
 
     <p>
+      <!--
       The first item <code>2 + 5</code> is a number, while the second one <code>'samurai'</code> is a string.
+      -->
+      最初の項目<code>2 + 5</code>は数値です。2番目の項目<code>'samurai'</code>は文字列です。
     </p>
 
     <p>
+      <!--
       What about the <strong>third parameter</strong>? It's not a string because it's not wrapped in quotes, and it's not a number either.
+      -->
+      <strong>3のパラメータは</strong>何でしょうか? それはクオーテーションマークで囲まれていないので文字列ではなく、数字でもありません。
     </p>
     <p>
+      <!--
       So <a onclick="showStep(17);">what is it</a>?
+      -->
+      それでは、<a onclick="showStep(17);">一体これは何でしょう</a>?
     </p>
   </div>
 </div>
@@ -714,16 +796,25 @@ layout: default
     <!--
     <h2>Booleans <span class="stamp is-type">type</span></h2>
     -->
-    <h2>Booleans <span class="stamp is-type">型</span></h2>
+    <h2>Boolean(真偽値)<span class="stamp is-type">型</span></h2>
 
+    <!--
     <p>While strings and numbers have an infinite amount of <em>possible</em> values, a <strong>boolean</strong> can only be either <code>true</code> or <code>false</code>.</p>
+    -->
+    <p>文字列と数値には無限の<em>とり得る</em>値がありますが、 <strong>Boolean(真偽値)</strong>は<code>true(真)</code>または<code>false(偽)</code>のいずれかの値にしかなりません。 </p>
 
     <p>
+      <!--
       By combining the <code>alert()</code> function and the 3-item array on a <em>single</em> line, it makes our code less readable.
+      -->
+     今、<code>alert()</code>関数と3つの項目をもつ配列を<em>一つの</em>行に含めているの、コードが読みにくくなっています。
     </p>
 
     <p>
+      <!--
       What if we could split the two by moving the array onto <a onclick="showStep(18);">its own line</a>?
+      -->
+      配列を<a onclick="showStep(18);">独自の行に移動</a>して２つに分割してはどうしょうか。
     </p>
   </div>
 </div>
@@ -734,14 +825,20 @@ layout: default
     <!--
     <h2>Variables <span class="stamp is-concept">concept</span></h2>
     -->
-    <h2>Variables <span class="stamp is-concept">コンセプト</span></h2>
+    <h2>Variables(変数) <span class="stamp is-concept">コンセプト</span></h2>
 
     <p>
+      <!--
       We can move the array into a <strong>variable</strong>.
+      -->
+      配列を<strong>変数</strong>に移動することができます。
     </p>
 
     <p>
+      <!--
       A variable is a <strong>container</strong> that stores a certain <strong>value</strong>. It has a <strong>name</strong> (so you can identify and re-use it), and it has a <strong>value</strong> (so you can update it later on).
+      -->
+      変数は、特定の<strong>値</strong>を格納する<strong>入れ物</strong>です。それは<strong>名前</strong>を持っています(それを特定して再利用することができます)。そして<strong>値</strong>をもっています。(後で値を更新することができます)。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_array.md %}{% endcapture %}
@@ -749,10 +846,16 @@ layout: default
 
     <ul>
       <li>
+        <!--
         <code>my_things</code> is the <strong>name</strong> of the variable
+        -->
+        <code>my_things(僕の物)</code> は変数の <strong>名前</strong> です。
       </li>
       <li>
+        <!--
         <code>[2 + 5, 'samurai', true]</code> is the <strong>value</strong> of the variable
+        -->
+        <code>[2 + 5, 'samurai', true]</code> は変数の <strong>値</strong> です。
       </li>
     </ul>
 
@@ -1840,10 +1943,10 @@ layout: default
       <span class="stamp is-concept">コンセプト</span>
     </div>
     <div id="sideFunctions" class="side-item">
-      <span class="side-word is-concept">Functions</span>
+      <span class="side-word is-concept">Function(関数)</span>
     </div>
     <div id="sideVariables" class="side-item">
-      <span class="side-word is-concept">Variables</span>
+      <span class="side-word is-concept">Variables(変数)</span>
     </div>
     <div id="sideConditionals" class="side-item">
       <span class="side-word is-concept">Conditionals</span>
@@ -1861,13 +1964,13 @@ layout: default
       <span class="stamp is-type">型</span>
     </div>
     <div id="sideStrings" class="side-item">
-      <span class="side-word is-type">Strings</span>
+      <span class="side-word is-type">String(文字列)</span>
     </div>
     <div id="sideNumbers" class="side-item">
-      <span class="side-word is-type">Numbers</span>
+      <span class="side-word is-type">Number(数値)</span>
     </div>
     <div id="sideObjects" class="side-item">
-      <span class="side-word is-type">Objects</span>
+      <span class="side-word is-type">Object(オブジェクト)</span>
     </div>
     <div id="sideArrays" class="side-item">
       <span class="side-word is-type">Arrays</span>
