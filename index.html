@@ -1184,15 +1184,25 @@ layout: default
     </div>
 
     <p>
+      <!--
       Just like the <code>+</code> and <code>*</code> before, <code>&gt;</code> is a JavaScript <strong>operator</strong>.
+      -->
+      <code>+</code>と<code>*</code>と同じように、 <code>&gt;</code>はJavaScript <strong>演算子</strong>です。
     </p>
 
     <p>
+      <!--
       When you make such a comparison with the "<em>greater than</em>" operator <code>&gt;</code>, you obtain a <strong>boolean</strong> value.
+      -->
+      "<em>より大きい</em>"演算子<code>&gt;</code>で比較すると、<strong>Boolean(真偽)</strong>値が得られます。
     </p>
 
     <p>
+      <!--
       Since the result of a <strong>comparison</strong> only has <strong>2</strong> outcomes (<code>true</code> or <code>false</code>), it's useful in cases where your code has to <a onclick="showStep(26);">make a decision</a>…
+      -->
+      <strong>比較</strong>結果には<strong>2つの</strong>結果(<code>true</code>または<code>false</code>) しかないので、コードが何か
+      <a onclick="showStep(26);">決定を下す必要</a>がある場合に便利です…
     </p>
   </div>
 </div>
@@ -1438,13 +1448,13 @@ layout: default
     <!--
     <h2>Loops <span class="stamp is-concept">concept</span></h2>
     -->
-    <h2>Loop(ループ/繰り返し)<span class="stamp is-concept">コンセプト</span></h2>
+    <h2>Loop(ループ)<span class="stamp is-concept">コンセプト</span></h2>
 
     <p>
       <!--
       When you want to execute a block of code a <em>certain amount</em> of times, you can use a JavaScript <strong>loop</strong>.
       -->
-      コードブロックを<em>一定回数</em>実行する場合は、JavaScript の<strong>loop(繰り返し)</strong>を使用できます 。
+      コードブロックを<em>一定回数</em>実行する場合は、JavaScript の<strong>ループ</strong>を使用できます 。
     </p>
 
     <p>
@@ -1464,92 +1474,157 @@ layout: default
   <div class="content">
     {% include partials/gj.html title="Three it is!" %}
     <p>
+      <!--
       There were exactly <strong>3</strong> alert boxes! Let's dissect what happened:
+      -->
+      正確に<strong>3</strong>つの警告ボックスが表示されました。起こったことを分解して見ましょう。
     </p>
 
     <ul>
       <li>
+        <!--
         <code>var i = 0</code> is the <strong>initial state</strong><br>
+        -->
+        <code>var i = 0</code>は<strong>初期状態</strong>です<br>
         Before the loop even starts, the variable <code>i</code> is assigned a value of zero <code>0</code>.
       </li>
       <li>
+        <!--
         <code>i < 3</code> is the <strong>conditional statement</strong><br>
+        -->
+        <code>i &lt; 3</code>は<strong>条件式</strong>です。<br>
+        <!--
         On every iteration of the loop, we check this comparison.<br>
         If it's <code>true</code>, we execute the code in the block.<br>
         If it's <code>false</code>, we exit the loop.<br>
+        -->
+        ループの繰り返しごとに、この比較をチェックします。 <br>それが<code>true</code>であれば、ブロック内のコードを実行します。 <br>
+        <code>false</code>場合、ループを終了します。 <br>
       </li>
       <li>
+        <!--
         <code>i++</code> is the <strong>increment expression</strong><br>
+        -->
+        <code>i++</code>は<strong>インクリメント(増やす)式</strong>です。<br>
+        <!--
         <em>If</em> the block of code is executed, this expression is executed.<br>
         In this case, the value of <code>i</code> is incremented by 1.
+        -->
+        コードのブロックが実行されている<em>場合</em>は、この式が実行されます。<br>この場合、 <code>i</code>の値は1だけインクリメント(増や)されます。
       </li>
     </ul>
 
     <p>
-      Here's how you implemented it:
+      <!--
+      Here's how you implemented it
+      -->
+      これを実装した方法は次のとおりです。
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>keyword</strong> <code>for</code></div>
+        -->
+        <div class="stab-label"><strong>キーワード</strong> <code>for</code>タイプしました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-purple">for</span> (var i = 0; i < 3; i++) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        -->
+        <div class="stab-label"><strong>開き括弧</strong>を入力し括弧を開きました</div>
         <div class="stab-code"><code class="stabilo">for <span class="is-black">(</span>var i = 0; i < 3; i++) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you entered the <strong>initial state</strong></div>
+        -->
+        <div class="stab-label">あなたは<strong>初期状態</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">for (<span class="is-purple">var </span><span class="is-blue">i</span><span class="is-purple"> = </span><span class="is-red">0</span>; i < 3; i++) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed a <strong>semicolon</strong> to separate the expressions</div>
+        -->
+        <div class="stab-label">式を区切るために<strong>セミコロン</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0<span class="is-black">;</span> i < 3; i++) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you entered the <strong>comparison</strong> check</div>
+        -->
+        <div class="stab-label"><strong>比較式</strong>によるチェックを入力しました</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; <span class="is-blue">i</span><span class="is-purple"> < </span><span class="is-red">3</span>; i++) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed a <strong>semicolon</strong> to separate the expressions</div>
+        -->
+        <div class="stab-label">式を区切るために<strong>セミコロン</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3<span class="is-black">;</span> i++) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you entered the <strong>increment</strong> expression</div>
+        -->
+        <div class="stab-label"><strong>インクリメント</strong>式を入力しました</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3; <span class="is-blue">i</span><span class="is-purple">++</span>) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
+        -->
+        <div class="stab-label"><strong>閉じ括弧</strong>を入力して括弧を閉じました</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3; i++<span class="is-black">)</span> {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>curly bracket</strong></div>
+        -->
+        <div class="stab-label"><strong>開き波括弧</strong>を入力して波括弧を開きました</div>
         <div class="stab-code"><code class="stabilo">for (var i = 0; i < 3; i++) <span class="is-black">{</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you entered a <strong>block of code</strong> that's only executed if the comparison check is <strong>true</strong></div>
+        -->
+        <div class="stab-label">比較チェックが<strong>真</strong>である場合にのみ実行される<strong>コードのブロック</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">&nbsp;&nbsp;alert</span><span class="is-black">(</span><span class="is-blue">i</span><span class="is-black">);</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the curly bracket</div>
+        -->
+        <div class="stab-label"><strong>閉じ波括弧</strong>を入力して波括弧を閉じました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">}</span></code></div>
       </div>
     </div>
 
     <p>
+      <!--
       Let's analyze each iteration of the loop:
+      -->
+        ループの各反復を分析してみましょう。
     </p>
 
     <div class="table-container">
       <table>
         <thead>
           <tr>
+            <!--
             <th>Iteration</th>
             <th>Value of <code>i</code></th>
             <th>Test</th>
             <th>Trigger the alert?</th>
+            -->
+            <th>反復</th>
+            <th> <code>i</code>の値</th>
+            <th>テスト</th>
+            <th>アラートをトリガーするか</th>
           </tr>
         </thead>
+        <!--
         <tbody>
           <tr>
             <td>1st</td>
@@ -1576,15 +1651,53 @@ layout: default
             <td><strong>No!</strong></td>
           </tr>
         </tbody>
+        -->
+        <tbody>
+          <tr>
+            <td>1回目</td>
+            <td>0</td>
+            <td><code>0&nbsp;&lt;&nbsp;3</code></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>2回目</td>
+            <td>1</td>
+            <td><code>1&nbsp;&lt;<&nbsp;3</code></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>3回目</td>
+            <td>2</td>
+            <td><code>2&nbsp;&lt;&nbsp;3</code></td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>4回目</td>
+            <td>3</td>
+            <td><code>3&nbsp;&lt;&nbsp;3</code></td>
+            <td><strong>No!</strong></td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
     <p>
+      <!--
       This loop allowed us to <strong>repeat</strong> an action N times. That's what computers are all about!
+      -->
+      このループにより、N回アクションを<strong>繰り返す</strong>ことができました。それがコンピュータの目的です。
     </p>
 
     <p>
+      <!--
       Of all the types of variables we've covered so far, there is one in particular <a onclick="showStep(32);">worth looping through…</a>
+      -->
+      これまで説明してきたvariableの中で、とりわけ<a onclick="showStep(32);">loop(繰り返す)</a>意味が有ります。
+    </p>
+    <p>
+      <small>
+      訳注: (variable = 変数/価値のあるもの, loop = ループ文/繰り返して勉強する) を掛けています。
+      </small>
     </p>
   </div>
 </div>
@@ -1595,34 +1708,56 @@ layout: default
     <!--
     <h2>Looping through arrays <span class="stamp is-tool">tool</span></h2>
     -->
-    <h2>Looping through arrays <span class="stamp is-tool">ツール</span></h2>
+    <h2>配列をループ<span class="stamp is-tool">ツール</span> </h2>
 
     <p>
+      <!--
       Arrays are a perfect candidate for loops, because in programming we often want to repeat the <strong>same action</strong> for <em>each</em> item of an array.
+      -->
+      プログラミングではしばしば配列の<em>各項目</em>に対して<strong>同じアクション</strong>を繰り返すことが多いため、ループの候補となります。
     </p>
 
     <p>
+      <!--
       Let's say we wanted to trigger an alert box for <em>each</em> item of an array. While we could write as many <code>alert()</code> statements as there are items in the array (😰), this solution is cumbersome and ineffective! It would be prone to errors, and wouldn't scale at all with bigger arrays.
+      -->
+      配列の<em>各項目</em>に対して警告ボックスをトリガーしたいとしましょう。配列のに項目があるのと同じ数の<code>alert()</code>文を書くことができますが、
+      この解決法は面倒で効果がありません! エラーが発生しやすく、非常に沢山の項目がある配列にスケールアップすることは非現実的です。
     </p>
 
     <p>
+      <!--
       Since programming languages are here to help us simplify our work, let's figure out a better way. We already know a few things:
+      -->
+      プログラミング言語は私たちの仕事をシンプルにするためにあるので、より良い方法を見つけましょう。私たちはすでにいくつか知っています。
     </p>
 
     <ul>
       <li>
+        <!--
         We know how to get an array's <strong>length</strong>
+        -->
+        配列の<strong>長さ(項目数)</strong>を取得する方法はわかっています
       </li>
       <li>
+        <!--
         We know how to access an array's item by using the <strong>index</strong>
+        -->
+        <strong>インデックス</strong>を使用して配列の項目にアクセスする方法はわかってます
       </li>
       <li>
+        <!--
         We have access to the variable <code>i</code>, which conveniently increments 1 by 1
+        -->
+        変数<code>i</code>をアクセスすることができます。そして簡単に1ずつ増加できます
       </li>
     </ul>
 
     <p>
+      <!--
       By combining these informations, we can devise the following snippet:
+      -->
+      これらの情報を組み合わせることで、次のスニペットを思いつくことができます。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_loop_array.md %}{% endcapture %}
@@ -1636,15 +1771,26 @@ layout: default
     {% include partials/gj.html title="In a row!" %}
 
     <p>
+      <!--
       One by one, the items of the array were displayed in their own alert box.
+      -->
+      1つ1つ、配列の項目がそれぞれのアラートボックスに表示されました。
     </p>
 
     <p>
+      <!--
       While using a loop simplifies the process of going through each item of an array, we still had to create a <code>for</code> block <strong>manually</strong> and create a new variable <code>i</code> whose only purpose was to increment after each loop.
+      -->
+      ループを使用すると配列の各項目を処理するプロセスが簡素化されますが、
+      <code>for</code>ブロックを<strong>手動</strong>で作成し、各ループの後にインクリメントする目的だけの新しい変数
+      <code>i</code>を作成する必要がありました。
     </p>
 
     <p>
+      <!--
       I know what you're thinking. "<em><a onclick="showStep(34);">There must be a better way</a>!</em>"
+      -->
+      あなたが何を考えているか知っていますよ。「<em><a onclick="showStep(34);">もっと良い方法があるはずだ!</a></em>」
     </p>
   </div>
 </div>
@@ -1655,10 +1801,13 @@ layout: default
     <!--
     <h2>forEach loop <span class="stamp is-tool">tool</span></h2>
     -->
-    <h2>forEach loop <span class="stamp is-tool">ツール</span></h2>
+    <h2>forEach ループ<span class="stamp is-tool">ツール</span></h2>
 
     <p>
+      <!--
       Arrays actually have a <strong>method</strong> called <code>forEach()</code>, which allows to perform a task <em>for each</em> item in the array:
+      -->
+      配列には実際に<code>forEach()</code>という<strong>メソッド</strong>があり、配列内の<em>各項目</em>に対してタスクを実行できます。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_loop_foreach.md %}{% endcapture %}
