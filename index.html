@@ -4,7 +4,7 @@ layout: default
 
 <header class="header">
   <h1 class="title"><strong class="fourteen">14</strong>分で JavaScript</h1>
-  <p class="subtitle">by <a href="https://jgthms.com" target="_blank">Jeremy Thomas</a>(日本語訳 <a href="https://hiroshi.toycode.com/" target="_blank">岡田洋</a>)</p>
+  <p class="subtitle">by <a href="https://jgthms.com" target="_blank">Jeremy Thomas</a><small>(日本語訳 <a href="https://hiroshi.toycode.com/" target="_blank">岡田洋</a>)</small></p>
 
   <div class="block">
     <a href="https://bulma.io" target="_blank">
@@ -1821,50 +1821,87 @@ layout: default
     {% include partials/gj.html title="Better!" %}
 
     <p>
+      <!--
       Note a few improvements:
+      -->
+      いくつかの改善点に注目してください。
     </p>
 
     <ul>
       <li>
+        <!--
         There is no <code>i</code> variable involved
+        -->
+        <code>i</code>という変数を使わなくて済みました
       </li>
       <li>
+        <!--
         We don't need to access the array's <code>length</code>
+        -->
+        配列の<code>length</code>にアクセスする必要がなくなりました。
       </li>
       <li>
+        <!--
         We don't need to use the <strong>index</strong> with <code>my_thing[i]</code> to access the item
+        -->
+        配列の各アイテムにアクセスするために<strong>インデックス</strong>を<code>my_thing[i]</code>のように使う必要がなくなりました
       </li>
     </ul>
 
     <p>
+      <!--
       Remember the syntax of the <code>alert()</code> function? It was <code>alert(parameter)</code>.
+      -->
+      <code>alert()</code>関数の構文を覚えていますか? それは<code>alert(parameter)</code>でした
     </p>
 
     <p>
+      <!--
       If you look carefully, you can see that <code>forEach()</code> has the exact same syntax! It's <code>forEach(parameter)</code> but where the parameter happens to be a <strong>function</strong> that spans 3 lines.
+      -->
+      注意深く見ると、 <code>forEach()</code>構文は他のメソッドと同じです。
+      これは<code>forEach(パラメータ)</code>ですが、今、パラメータは3行にまたがる<strong>関数</strong>になっています。
     </p>
 
     <p>
+      <!--
       So far, we've used a few functions and methods:
+      -->
+      ここまで、いくつかの関数とメソッドを使用しました。
     </p>
 
     <ul>
       <li>
+        <!--
         the <code>alert()</code> function (or window method)
+        -->
+        <code>alert()</code>関数（またはウィンドウメソッド）
       </li>
       <li>
+        <!--
         the <code>push()</code> array method
+        -->
+        <code>push()</code>配列メソッド
       </li>
       <li>
+        <!--
         the <code>includes()</code> array method
+        -->
+        <code>includes()</code>配列メソッド
       </li>
       <li>
+        <!--
         the <code>forEach()</code> array method
+        -->
+        <code>forEach()</code>配列メソッド
       </li>
     </ul>
 
     <p>
+      <!--
       We know how to <strong>call</strong> a function, but how do you actually <a onclick="showStep(36);">create one</a>?
+      -->
+      私たちは関数を<strong>呼び出す</strong>方法を知っていますが、では関数をどのように<a onclick="showStep(36);">作成するのでしょうか?</a>
     </p>
   </div>
 </div>
@@ -1875,22 +1912,36 @@ layout: default
     <!--
     <h2>Creating a custom function <span class="stamp is-info">info</span></h2>
     -->
-    <h2>Creating a custom function <span class="stamp is-info">情報</span></h2>
+    <h2>カスタム関数の作成<span class="stamp is-info">情報</span></h2>
 
     <p>
+      <!--
       The power of programming languages is the ability to create your <strong>own functions</strong>, that fit <em>your</em> needs.
+      -->
+      プログラミング言語の力は、 <em>あなたの自身の</em>ニーズに合った<strong>独自の関数</strong>を作成する能力です。
     </p>
 
     <p>
+      <!--
       Remember the keyword/parentheses combination that we used for <code>if/else</code> and <code>for</code>? Well, guess what: it's <em>almost</em> the same pattern here!
+      -->
+      <code>if/else</code>と<code>for</code>で使用したキーワードと括弧の組み合わせを覚えていますか?
+      ご想像の通り、カスタム関数の作成も<em>ほぼ</em>同じパターンです!
     </p>
 
     <p>
+      <!--
       I'm saying "almost" because the only difference is that a function needs a <strong>name</strong>!
+      -->
+      唯一の違いは関数が<strong>名前</strong>を必要とするということなので、私は<em>ほぼ</em>と言っています！
     </p>
 
     <p>
+      <!--
       Let's <strong>create</strong> a function called <code>greet()</code>, with <strong>1</strong> parameter called <code>name</code>, and then immediately <strong>call</strong> it:
+      -->
+      <code>greet()</code>という<code>name</code>という<strong>1</strong>つのパラメータを持つ関数を<strong>作成</strong>し、
+      すぐにそれを<strong>呼び出して</strong>みましょう：
     </p>
 
     {% capture snippet %}{% include snippets/snippet_greet.md %}{% endcapture %}
@@ -1904,100 +1955,176 @@ layout: default
     {% include partials/gj.html title="Greetings!" %}
 
     <p>
+      <!--
       You've created your first function! It's a simple one but it can teach you a lot.
+      -->
+      あなたは最初の関数を作成しました！それは単純なものですが、それはあなたに多くを教えることができます。
     </p>
 
     <p>
+      <!--
       Note a few things:
+      -->
+      いくつかのことに注目してください。
     </p>
 
     <ul>
       <li>
+        <!--
         the <strong>name</strong> of the function is <code>greet</code>
+        -->
+        関数の<strong>名前</strong>は<code>greet</code>です
       </li>
       <li>
+        <!--
         the <strong>parameter</strong> is called <code>name</code>: it's like a variable, since it acts as a container for a value
+        -->
+        <strong>パラメータ</strong>は<code>name</code>と呼ばれ、値のコンテナ(入れ物)として機能するため、変数のようなものです
       </li>
       <li>
+        <!--
         we're creating a <strong>variable</strong> called <code>message</code> (a string) whose value is <code>'Hey there ' + name</code>
+        -->
+        私たちは<code>message</code>と呼ばれる(文字列)<strong>変数</strong>を作成しています。その値は<code>'Hey there ' + name</code>です
       </li>
       <li>
+        <!--
         what this <strong>plus</strong> sign <code>+</code> does is <strong>concatenate</strong> (or combine) the two strings to make a single longer one
+        -->
+        この<strong>+</strong>記号<code>+</code>は、2つの文字列を<strong>連結</strong>して1つの長い文字列を作成するものです
       </li>
       <li>
+        <!--
         we're <strong>calling</strong> the <code>alert()</code> function, and use the <code>message</code> variable as parameter
+        -->
+        <code>alert()</code>関数を<strong>呼び出し</strong> 、<code>message</code>変数をパラメータとして使用します
       </li>
       <li>
+        <!--
         after having created the function, we're calling it with the parameter <code>'Alex'</code>
+        -->
+        関数を作成した後、パラメータとして<code>'Alex'</code>を渡して呼び出します
       </li>
     </ul>
 
     <p>
+      <!--
       If we break it down step by step:
+      -->
+      各段階ににブレークダウンすると以下のようになります。
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>keyword</strong> <code>function</code></div>
+        -->
+        <div class="stab-label">あなたは<strong>キーワード</strong> <code>function</code>を入力しました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-purple">function</span> greet(name) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>name</strong> of the function</div>
+        -->
+        <div class="stab-label">あなたは関数の<strong>名前</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">function <span class="is-blue">greet</span>(name) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>parenthesis</strong></div>
+        -->
+        <div class="stab-label"> <strong>開き括弧</strong>を入力して括弧を開きました</div>
         <div class="stab-code"><code class="stabilo">function greet<span class="is-black">(</span>name) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you created a <strong>parameter</strong> called <code>name</code></div>
+        -->
+        <div class="stab-label"> <code>name</code>という<strong>パラメータ</strong>を作成しました</div>
         <div class="stab-code"><code class="stabilo">function greet(<span class="is-blue">name</span>) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
+        -->
+        <div class="stab-label"><strong>閉じ括弧</strong>を入力して括弧を閉じました</div>
         <div class="stab-code"><code class="stabilo">function greet(name<span class="is-black">)</span> {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>curly bracket</strong></div>
+        -->
+        <div class="stab-label"><strong>開き波括弧</strong>を入力して波括弧を開きました</div>
         <div class="stab-code"><code class="stabilo">function greet(name) <span class="is-black">{</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you entered a <strong>block of code</strong> that's only executed whenever the function is <strong>called</strong></div>
+        -->
+        <div class="stab-label">関数が<strong>呼び出され</strong>た時にのみ実行される<strong>コードブロック</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo">&nbsp;&nbsp;<span class="is-purple">var</span><span class="is-blue"> message </span><span class="is-purple">= </span><span class="is-green">'Hey there '</span><span class="is-purple"> +</span><span class="is-blue"> name</span><span class="is-black">;</span></code><br><code class="stabilo">&nbsp;&nbsp;<span class="is-blue">alert</span><span class="is-black">(</span><span class="is-blue">message</span><span class="is-black">);</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the curly bracket</div>
+        -->
+        <div class="stab-label"><strong>閉じ波括弧</strong>を入力して波括弧を閉じました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">}</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>called</strong> the function with a string as parameter</div>
+        -->
+        <div class="stab-label">パラメータとして文字列を指定して関数を<strong>呼び出しました</strong></div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">greet</span><span class="is-black">(</span><span class="is-green">'Alex'</span><span class="is-black">)</span><span class="is-black">;</span></code></div>
       </div>
     </div>
 
     <p>
+      <!--
       Unless we call the <code>greet()</code> function at the end, nothing happens! That's because the <code>alert()</code> call is <em>inside</em> the scope of <code>greet()</code> so it's not triggered unless the parent function <code>greet()</code> itself is called!
+      -->
+      最後に<code>greet()</code>関数を呼び出さない限り、何も起こりません！これは、 <code>alert()</code>コールが<code>greet()</code>スコープの<em>内側に</em>あるため、親関数<code>greet()</code>自体が呼び出されない限りトリガされないためです。
     </p>
 
     <p>
+      <!--
       Basically, by <strong>creating</strong> <code>greet()</code>, you're only telling the browser: "<em>Hey! I've created this new function. So if at some point I call it, please execute whatever is inside!</em>".
+      -->
+      基本的には、 <code>greet()</code> <strong>を作成</strong> <code>greet()</code>するだけでは、ブラウザーに「<em>ちょっと、私はこの新しい関数を作成しました。だから、ある時点で呼び出す場合は、何かを実行してください!</em>」
+      と言っているだけです。
     </p>
 
     <p>
+      <!--
       That's why, when you <strong>call</strong> <code>greet()</code> at the end, the browser executes its content, which happens to be calling <code>alert()</code>.
+      -->
+      そのため、最後に<code>greet()</code>を<strong>呼び出す</strong>と、ブラウザはそのコンテンツを実行します。このコンテンツは<code>alert()</code>呼び出すことになります。
     </p>
 
     <p>
+      <!--
       It's important to understand that functions are a <strong>2-step</strong> process: creating it first, calling it afterwards.
+      -->
+       関数は<strong>2段階の</strong>プロセスであることを理解することが重要です。最初に作成し後で呼び出すことです。
     </p>
 
     <p>
+      <!--
       As a matter of fact, the <code>alert()</code> function we've used all along was already created beforehand. It just exists somewhere inside your browser.
+      -->
+      実際には、私たちが使ってきた<code>alert()</code>関数はすでに事前に作成されています。それはちょうどあなたのブラウザのどこかに存在します。
     </p>
 
     <p>
+      <!--
       Anyway, we've already covered <em>a lot</em> in 14 minutes!<br>
-      So, <a onclick="showStep(38);">what's next</a>?
+      -->
+       とにかく、すでに14分で<em>多く</em>のことを<em>学習</em>しました!<br>
+       <!--
+       So, <a onclick="showStep(38);">what's next</a>?
+       -->
+       それでは、 <a onclick="showStep(38);">次には何をやったらよいでしょうか?</a>
     </p>
   </div>
 </div>
@@ -2008,21 +2135,33 @@ layout: default
     <!--
     <h2>Next steps <span class="stamp is-victory">victory!</span></h2>
     -->
-    <h2>Next steps <span class="stamp is-victory">大勝利!</span></h2>
+    <h2>次のステップ <span class="stamp is-victory">大勝利!</span></h2>
 
+    <!--
     <h3>Learn JavaScript</h3>
+    -->
+    <h3> JavaScriptを学ぶ</h3>
 
     <p>
+      <!--
       We've barely covery the basics here. But don't worry! There are <em>tons</em> of resources available online!
+      -->
+      私たちここでは基本のみをカバーしています。しかし、心配しないでください！オンラインで入手できる<em>たくさん</em>のリソースがあります！
     </p>
 
     <p>
+      <!--
       Here are a few <strong>free</strong> resources I'd recommend:
+      -->
+      私がお勧めするいくつかの<strong>無料</strong>のリソースは以下のとおりです：
     </p>
 
     <ul>
       <li>
+        <!--
         <a href="http://eloquentjavascript.net/" rel="nofollow" target="_blank">Eloquent JavaScript</a>
+        -->
+        <a href="http://eloquentjavascript.net/" rel="nofollow" target="_blank">Eloquent JavaScript(奇妙なJavaScript)</a>
       </li>
       <li>
         <a href="https://www.freecodecamp.org/" rel="nofollow" target="_blank">freeCodeCamp</a>
@@ -2032,6 +2171,7 @@ layout: default
       </li>
       <li>
         <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript" rel="nofollow" target="_blank">Mozilla Developer Network</a>
+        <a href="https://developer.mozilla.org/ja/docs/Learn/JavaScript" rel="nofollow" target="_blank">Mozilla Developer Network(日本語)</a>
       </li>
       <li>
         <a href="https://github.com/getify/You-Dont-Know-JS" rel="nofollow" target="_blank">You Don't Know JS</a>
@@ -2039,7 +2179,10 @@ layout: default
     </ul>
 
     <p>
+      <!--
       If you prefer <strong>video tutorials</strong>, check out these <strong><a href="https://click.linksynergy.com/fs-bin/click?id=76TvM1KGjYg&offerid=358574.81&type=3&subid=0" target="_blank">Udemy courses</a><IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.81&type=3&subid=0" ></strong>:
+      -->
+      あなたが<strong>ビデオチュートリアル</strong>を好むなら、これらをチェックしてください。<strong><a href="https://click.linksynergy.com/fs-bin/click?id=76TvM1KGjYg&offerid=358574.81&type=3&subid=0" target="_blank">Udemy courses</a><IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.81&type=3&subid=0" ></strong>:
     </p>
 
     <nav class="shares">
@@ -2077,7 +2220,10 @@ layout: default
     </nav>
 
     <p>
+      <!--
       If you're in a rush, try this <strong>shorter</strong> course!
+      -->
+      あなたが急いでいる場合は、この<strong>短い</strong>コースを試してみてください！
     </p>
 
     <nav class="shares">
@@ -2098,14 +2244,23 @@ layout: default
       <IMG class="lazyload" border=0 width=1 height=1 data-src="https://ad.linksynergy.com/fs-bin/show?id=76TvM1KGjYg&bids=358574.670034&type=2&subid=0" >
     </nav>
 
+    <!--
     <h3>Learn HTML and CSS</h3>
+    -->
+    <h3> HTMLとCSSを学ぶ</h3>
 
     <p>
+      <!--
       JavaScript is only one third of what makes a webpage! You also need to know <strong>HTML</strong> and <strong>CSS</strong>.
+      -->
+        JavaScriptは、Webページを作るものの3分の1に過ぎません！あなたはまた、<strong>HTML</strong>と<strong>CSS</strong>を知る必要があります 。
     </p>
 
     <p>
+      <!--
       Luckily, I've created <strong>two free references</strong> for you to browse through, so you can learn everything each language has to offer!
+      -->
+       幸いにも、私はあなたが参照できる<strong>2つの無料のリファレンス</strong>を作成したので、各言語が提供するすべてを学ぶことができます！
     </p>
 
     <nav class="shares">
@@ -2145,10 +2300,17 @@ layout: default
       </a>
     </nav>
 
+    <!--
     <h3>Learn my CSS framework</h3>
+    -->
+    <h3>私のCSSフレームワークを学ぶ</h3>
 
     <p>
+      <!--
       I designed this page with <strong>Bulma</strong>, my free open source CSS framework based on Flexbox. <a href="https://bulma.io" target="_blank">Check it out!</a>
+      -->
+      私は<strong>Bulma</strong> -- 私の作った Flexbox に基づいたオープンソースのCSSフレームワーク -- で、このページを設計しました。
+      <a href="https://bulma.io" target="_blank">チェックしてください! </a>
     </p>
 
     {%
@@ -2162,10 +2324,16 @@ layout: default
       height="160"
     %}
 
+    <!--
     <h3>Read my book</h3>
+    -->
+    <h3>私の本を読んでください</h3>
 
     <p>
       I wrote a <strong>44-page PDF</strong> called "<a href="https://jgthms.com/css-in-44-minutes-ebook" target="_blank">CSS in 44 minutes</a>" which teaches how to build your own personal webpage from scratch with HTML5 and CSS3.
+
+      <strong>44ページの</strong> 「<a href="https://jgthms.com/css-in-44-minutes-ebook" target="_blank">CSS in 44 minutes(44分でCSS)</a> 」という<strong>PDF</strong>を書いて、
+      HTML5やCSS3を使って自分の個人用ウェブページを最初から作り上げる方法を教えています。
     </p>
 
     {%
@@ -2180,11 +2348,17 @@ layout: default
     %}
 
     <p>
+      <!--
       As a bonus, the book also includes a small <strong>chapter on JavaScript</strong> in which I talk about functions, conditionals, objects, strings, and even explains how to interact with CSS.
+      -->
+      ボーナスとして、本書には<strong>JavaScriptに関する</strong>小さな<strong>章</strong>も含まれています。ここでは、関数、条件文、オブジェクト、文字列について説明し、CSSとのやりとり方法についても説明します。
     </p>
 
     <p>
+      <!--
       I guess now there's <a onclick="showStep(39);">only one thing left to do</a>…
+      -->
+      私は今、<a onclick="showStep(39);">あと1つしか残っていることがないと思います…</a>
     </p>
   </div>
 </div>
@@ -2192,7 +2366,10 @@ layout: default
 <!-- 39 -->
 <div id="step39" class="step">
   <div class="content">
+    <!--
     <h2>Share and support! 😍</h2>
+    -->
+    <h2>共有し、サポートしてください! 😍 </h2>
 
     <nav class="shares">
       <a
@@ -2269,11 +2446,18 @@ layout: default
     {% include partials/newsletter.html %}
 
     <p>
+      <!--
       Thanks for reading!
+      -->
+      読んでくれてありがとう！
     </p>
 
     <p class="madeby">
+      <!--
       Made by <a href="https://jgthms.com/" target="_blank">@jgthms</a>
+      -->
+      <a href="https://jgthms.com/" target="_blank">@jgthms</a>が作りました<br>
+      <small>(日本語訳 <a href="https://hiroshi.toycode.com/" target="_blank">岡田洋</a>)</small>
     </p>
   </div>
 </div>
