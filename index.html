@@ -1261,61 +1261,102 @@ layout: default
     {% include partials/gj.html title="Equal indeed!" %}
 
     <p>
+      <!--
       We're doing another comparison here, but with the "<em>equal to</em>" operator <code>==</code> instead.
+      -->
+      ここでは別の比較を行っていますが、代わりに<em>等しい</em> 演算子<code>==</code>使用しています。
     </p>
 
     <div class="stabs is-vertical">
       <div class="stab">
+        <!--
         <div class="stab-label">you typed the <strong>keyword</strong> <code>if</code></div>
-        <div class="stab-code"><code class="stabilo"><span class="is-purple">if</span> (window.location.hostname == 'jgthms.com') {</code></div>
+        -->
+        <div class="stab-label"><strong>キーワード</strong> <code>if</code> を入力した</div>
+        <div class="stab-code"><code class="stabilo"><span class="is-purple">if</span> (window.location.hostname == '{{ site.hostname }}') {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>parenthesis</strong></div>
-        <div class="stab-code"><code class="stabilo">if <span class="is-black">(</span>window.location.hostname == 'jgthms.com') {</code></div>
+        -->
+        <div class="stab-label"> <strong>開き括弧</strong>を入力して括弧を開きました</div>
+        <div class="stab-code"><code class="stabilo">if <span class="is-black">(</span>window.location.hostname == '{{ site.hostname }}')) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you typed a <strong>comparison</strong></div>
-        <div class="stab-code"><code class="stabilo">if (<span class="is-blue">window</span><span class="is-black">.</span><span class="is-blue">location</span><span class="is-black">.</span><span class="is-blue">hostname</span><span class="is-purple"> == </span><span class="is-green">'jgthms.com'</span>) {</code></div>
+        -->
+        <div class="stab-label"><strong>比較演算子</strong>をタイプししました</div>
+        <div class="stab-code"><code class="stabilo">if (<span class="is-blue">window</span><span class="is-black">.</span><span class="is-blue">location</span><span class="is-black">.</span><span class="is-blue">hostname</span><span class="is-purple"> == </span><span class="is-green">'{{ site.hostname }}'</span>) {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the parenthesis</div>
-        <div class="stab-code"><code class="stabilo">if (window.location.hostname == 'jgthms.com'<span class="is-black">)</span> {</code></div>
+        -->
+        <div class="stab-label"><strong>閉じ括弧</strong>を入力してして括弧を閉じました</div>
+        <div class="stab-code"><code class="stabilo">if (window.location.hostname == '{{ site.hostname }}'<span class="is-black">)</span> {</code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you opened a <strong>curly bracket</strong></div>
-        <div class="stab-code"><code class="stabilo">if (window.location.hostname == 'jgthms.com') <span class="is-black">{</span></code></div>
+        -->
+        <div class="stab-label"><strong>開き波括弧</strong>を入力して波括弧を開きました</div>
+        <div class="stab-code"><code class="stabilo">if (window.location.hostname == '{{ site.hostname }}') <span class="is-black">{</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you entered a <strong>block of code</strong> that's only executed if the previous condition is <strong>true</strong></div>
+        -->
+        <div class="stab-label">直前の条件が<strong>真</strong>である場合にのみ実行される<strong>コードブロック</strong>を入力しました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-blue">&nbsp;&nbsp;alert</span><span class="is-black">(</span><span class="is-green">'Welcome on my domain! 🤗'</span><span class="is-black">)</span></code></div>
       </div>
       <div class="stab">
+        <!--
         <div class="stab-label">you <strong>closed</strong> the curly bracket</div>
+        -->
+        <div class="stab-label"><strong>閉じ波括弧</strong>を入力して波括弧を閉じました</div>
         <div class="stab-code"><code class="stabilo"><span class="is-black">}</span></code></div>
       </div>
     </div>
 
     <p>
+      <!--
       Since the alert box <em>did</em> appear, it means that the <strong>hostname</strong> is indeed <em>equal to</em> <code>'jgthms.com'</code>!
+      -->
+      アラートボックス<em>が</em>表示されたので、 <strong>hostname</strong>が実際<em>に</em> <code>'{{ site.hostname }}'</code>に<em>等しい</em>ことを意味します。
     </p>
 
     <p>
+      <!--
       We've handled the case when the comparison returns <code>true</code>.
+      -->
+       比較が<code>true</code>返すケースを処理しました。
     </p>
 
     <p>
+      <!--
       To handle the <strong>opposite case</strong>, when the hostname isn't <code>'jgthms.com'</code>, we can use the "<em>not equal to</em>" <strong>operator</strong> <code>!=</code>:
+      -->
+      <strong>反対の場合</strong>を処理するために、ホスト名が<code>{{ site.hostname }}</code>でない場合、<em>非等価</em><strong>演算子</strong><em><code>!=</code>を</em>使用できます。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_if_not.md %}{% endcapture %}
     {% include partials/snippet.html contents=snippet skipRun=true %}
 
     <p>
+      <!--
       If you try out this snippet, you'll see that it doesn't trigger anything! (Unless this tutorial has been copied to another domain 😆).
+      -->
+      このスニペット(コードの断片)を試してみると、何もトリガーしないことがわかります! (このチュートリアルが別のドメインにコピーされていない限り、😆)
     </p>
 
     <p>
+      <!--
       What if we wanted to handle both cases <strong>simultaneously</strong>? We could write two <code>if</code> statements in a row. But since one statement is the <em>exact opposite</em> of the other, we can <strong>combine</strong> them with a <code>else</code> statment:
+      -->
+      両方のケースを<strong>同時に</strong>処理したい場合はどうすればよいでしょうか？ <code>if</code>文を2行書くことができます。
+      しかし、一方のステートメントは他方のステートメントとは
+      <em>まったく反対</em>であるため、それらを<code>else</code>ステートメントと<strong>組み合わせる</strong>ことができます。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_if_else.md %}{% endcapture %}
@@ -1328,19 +1369,34 @@ layout: default
   <div class="content">
     {% include partials/gj.html title="Still equal!" %}
 
+    <!--
     <p>With this conditional setup, we can be sure that:</p>
+    -->
+    <p>この条件文の一式で、次のことを確認できます。 </p>
 
     <ul>
+      <!--
       <li><strong>only one</strong> of the two alerts will be triggered, but never both</li>
+      -->
+      <li> 2つのアラートのうちの<strong>1つだけ</strong>がトリガされます。</li>
+      <!--
       <li>at least one of the two alerts <em>will</em> be triggered, because we're covering <strong>all</strong> cases</li>
+      -->
+      <li><strong>すべての</strong>ケース(場合)をカバーしているので、2つのアラートの<em>少なくとも一方</em>が、トリガされます</li>
     </ul>
 
     <p>
+      <!--
       While <code>else</code> is useful for covering all <em>remaining</em> cases, sometimes you want to handle more than two cases.
+      -->
+      <em>残りの</em>すべてのケース(場合)をカバーするには<code>else</code>が便利です。しかし、時には2つ以上のケース(場合)を処理したい場合もあります。
     </p>
 
     <p>
+      <!--
       By using <code>else if</code> you can add <strong>intermediate</strong> statements and handle multiple cases:
+      -->
+      <code>else if</code>を使用して、<strong>中間</strong>の文を追加することにより、複数のケース(場合)を処理することができます。
     </p>
 
     {% capture snippet %}{% include snippets/snippet_else_if.md %}{% endcapture %}
@@ -1354,15 +1410,24 @@ layout: default
     {% include partials/gj.html title="You got it!" %}
 
     <p>
+      <!--
       As soon as one comparison returns <code>true</code>, it will be triggered, and all following statements will be ignored. That's why only one alert box showed up!
+      -->
+      1つの比較が<code>true</code>を返すとすぐに、それがトリガーされ、後続のすべてのステートメントは無視されます。だからこそ、警告箱が1つしか現れなかったのです！
     </p>
 
     <p>
+      <!--
       Conditional statements make use of the <strong>keywords</strong> <code>if</code> and <code>else</code>, followed by a set of <strong>parentheses</strong>.
+      -->
+      条件文は、 <strong>キーワード</strong> <code>if</code>と<code>else</code>を使用し、その後に<strong>括弧</strong>というパターンを使用します 。
     </p>
 
     <p>
+      <!--
       This pattern of keyword/parentheses combination also happens to exist for another <a onclick="showStep(30);">essential programming concept…</a>
+      -->
+      キーワード/括弧という組み合わせパターンは、別の<a onclick="showStep(30);">必須のプログラミングコンセプトにも現れます…</a>
     </p>
   </div>
 </div>
@@ -1373,14 +1438,20 @@ layout: default
     <!--
     <h2>Loops <span class="stamp is-concept">concept</span></h2>
     -->
-    <h2>Loops <span class="stamp is-concept">コンセプト</span></h2>
+    <h2>Loop(ループ/繰り返し)<span class="stamp is-concept">コンセプト</span></h2>
 
     <p>
+      <!--
       When you want to execute a block of code a <em>certain amount</em> of times, you can use a JavaScript <strong>loop</strong>.
+      -->
+      コードブロックを<em>一定回数</em>実行する場合は、JavaScript の<strong>loop(繰り返し)</strong>を使用できます 。
     </p>
 
     <p>
+      <!--
       Can you guess how many alert boxes this snippet will trigger?
+      -->
+      あなたはこのスニペット(コードの断片)がいくつの警告ボックスをトリガーするかを当てられますか?
     </p>
 
     {% capture snippet %}{% include snippets/snippet_loop.md %}{% endcapture %}
@@ -2076,7 +2147,7 @@ layout: default
       <span class="side-word is-concept">Conditional statement(条件文)</span>
     </div>
     <div id="sideLoops" class="side-item">
-      <span class="side-word is-concept">Loops</span>
+      <span class="side-word is-concept">Loop(繰り返し)</span>
     </div>
   </div>
 
