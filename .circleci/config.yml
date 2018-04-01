@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - 06:e8:9c:d0:2b:27:86:38:c4:0c:00:c2:1a:f2:98:e1
+      - run: git config --global user.name "Hiroshi Okada (ci)"
+      - run: git config --global user.email okadahiroshi@miobox.jp
+      - run: ./deploy.sh
+
