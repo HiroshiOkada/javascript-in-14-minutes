@@ -1,12 +1,12 @@
-＃14分 でわかる JavaScript の基本
+＃14分 で JavaScript の基本を
 
 これは Jeremy Thomas 氏の
 <a href="https://jgthms.com/javascript-in-14-minutes/">
     <img src="https://raw.githubusercontent.com/jgthms/javascript-in-14-minutes/master/images/javascript-in-14-minutes.png" alt="JavaScript in 14 minutes" style="max-width:100%;" width="600" height="315">
 </a>
-を日本語に翻訳(作業中)のものです。
+を日本語に翻訳したものです。
 
-著作権等の権利ははオリジナルのものに準じます
+著作権等はオリジナルのものに準じます
 
 オリジナルの README.md は README.org.md をご覧ください。
 
