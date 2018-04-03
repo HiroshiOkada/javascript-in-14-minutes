@@ -31,17 +31,17 @@ function checkStep1(str) {
     return showStep(2)
   } else if (str.toLowerCase() == 'hello world!') {
     return console.log(
-      'JavaScript では 大文字と小文字を区別します。大文字と小文字を正しく入力して下さい。'
+      'Watch out! In JavaScript, uppercase and lowercase letters are different. Make sure all letters have the proper case.'
     )
   }
-  console.log('正しい文字列を入力してください.')
+  console.log('Please type the correct string.')
 }
 
 function checkStep5(str) {
   if (str == 24) {
     return showStep(6)
   }
-  console.log('もう一度!')
+  console.log('Try again!')
 }
 
 function checkStep7(str) {
@@ -49,7 +49,7 @@ function checkStep7(str) {
     browser_width_el.innerHTML = window.innerWidth
     return showStep(8)
   }
-  console.log(`答えは ${window.innerWidth} になるはずです!`)
+  console.log(`The answer should be ${window.innerWidth}!`)
 }
 
 function checkStep10(str) {
@@ -80,7 +80,7 @@ function checkStep18(str) {
   if (!state.desktop) {
     return showStep(19)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (str == my_things) {
     return showStep(19)
   }
@@ -90,16 +90,16 @@ function checkStep19(str) {
   if (!state.desktop) {
     return showStep(20)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (my_things.length < 2) {
-    return console.log('少なくとも2項目からなる配列を作成してください。')
+    return console.log('Please create an array with at least 2 items.')
   } else if (str != my_things[1]) {
-    return console.log('インデックスが 1 である項目を選択してください。')
+    return console.log('Please choose the item at index 1.')
   } else if (str == my_things[1]) {
     return showStep(20)
   }
   console.log(
-    '"my_things" という配列を作成しインデックスが 1 である項目を選択してください。.'
+    'Please create an array called "my_things" and choose the item at index 1.'
   )
 }
 
@@ -107,25 +107,25 @@ function checkStep20(str) {
   if (!state.desktop) {
     return showStep(21)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (str == my_things.length) {
     return showStep(21)
   }
-  console.log('"my_things" という名前の配列を作成してください。')
+  console.log('Please create an array called "my_things".')
 }
 
 function checkStep21(str) {
   if (!state.desktop) {
     return showStep(22)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (str == '7,samurai,true') {
     return
   } else if (str == '7,samurai,true,LOVE') {
     return showStep(22)
   }
   console.log(
-    '"my_things" という名前の配列を作成し、"LOVE" という文字列を追加してください。'
+    'Please create an array called "my_things" and add the string "LOVE".'
   )
 }
 
@@ -133,14 +133,14 @@ function checkStep22(str) {
   if (!state.desktop) {
     return showStep(23)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (str == '7,samurai,true') {
     return
   } else if (str == '7,samurai,true,The Button') {
     return showStep(23)
   }
   console.log(
-    '"my_things" という名前の配列を作成し "The Button" という文字列を追加してください。'
+    'Please create an array called "my_things" and add the string "The Button".'
   )
 }
 
@@ -148,14 +148,16 @@ function checkStep23(str) {
   if (!state.desktop) {
     return showStep(24)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (str == true) {
-    return console.log('配列に存在しない項目でテストしてください。')
+    return console.log(
+      'Please test for an element that is NOT in the array.'
+    )
   } else if (str == false) {
     return showStep(24)
   }
   console.log(
-    '"my_things" 名前の配列を作成し、"includes()" メソッドを呼び出して下さい。'
+    'Please create an array called "my_things" and call the method "includes()".'
   )
 }
 
@@ -165,23 +167,23 @@ function checkStep24(str) {
     wider.style.display = displaying
     return showStep(25)
   }
-  console.log('もう一度!')
+  console.log('Try again!')
 }
 
 function checkStep26(str) {
   if (str.startsWith('Welcome on my domain')) {
     return showStep(27)
   }
-  console.log('もう一度!')
+  console.log('Try again!')
 }
 
 function checkStep27(str) {
   if (str.startsWith('Welcome on my domain')) {
     return showStep(28)
   } else if (str.startsWith('Please come back soon')) {
-    return console.log('"==" 演算子を使ってください。')
+    return console.log('Make sure you use the "==" operator.')
   }
-  console.log('もう一度!')
+  console.log('Try again!')
 }
 
 function checkStep28(str) {
@@ -193,7 +195,7 @@ function checkStep28(str) {
   } else if (str.startsWith('Decent size')) {
     return showStep(29)
   }
-  console.log('すべての命令を正しい順番で入力したか確認してください。')
+  console.log('Make sure you type all statements in the correct order.')
 }
 
 function checkStep30(str) {
@@ -202,23 +204,23 @@ function checkStep30(str) {
   } else if (str == '2') {
     return showStep(31)
   }
-  console.log('もう一度!')
+  console.log('Try again!')
 }
 
 function checkArrayLoop(str, nextStep) {
   if (!state.desktop) {
     return showStep(nextStep)
   } else if (typeof my_things == 'undefined') {
-    return console.log('"my_things" という名前の配列を作成してください。')
+    return console.log('Please create an array called "my_things".')
   } else if (my_things.length < 2) {
-    return console.log('少なくとも 2項目からなる配列を作成してください。')
+    return console.log('Please create an array with at least 2 items.')
   } else if (str == my_things[my_things.length - 1]) {
     return showStep(nextStep)
   } else if (my_things.includes(str)) {
     return
   }
   console.log(
-    '"my_things" という配列を作成し、それでループを回してください。'
+    'Please create an array called "my_things" and loop through it.'
   )
 }
 
@@ -234,12 +236,12 @@ function checkStep36(str) {
   if (!state.desktop) {
     return showStep(37)
   } else if (typeof greet == 'undefined') {
-    return console.log('"greet" という名前の関数を作成してください。')
+    return console.log('Please create a function called "greet".')
   } else if (str.startsWith('Hey there ')) {
     return showStep(37)
   }
   console.log(
-    '"greet" という名前の関数を作成して、\'Alex\' というパラメータで呼び出して下さい。'
+    'Please create a function called "greet" and call it with the parameter \'Alex\'.'
   )
 }
 
